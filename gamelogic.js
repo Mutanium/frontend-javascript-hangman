@@ -22,7 +22,11 @@ function isGameWon(word, guesses) {
 }
 
 function isGameLost(word, guesses) {
-  // WRITE ME
+  if(guesses.length >= 7 ) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 module.exports = {
