@@ -17,7 +17,8 @@ function displayWordSoFar(word, guesses) {
 }
 
 function isGameWon(word, guesses) {
-  // WRITE ME
+  return word.split("").every((c) => guesses.includes(c));
+
 }
 
 function isGameLost(word, guesses) {

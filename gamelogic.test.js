@@ -35,7 +35,9 @@ test("isGameWon should return false when all letters have not been guessed yet",
 
   // ASSERT
   expect(gameWon).toBe(false);
+
 });
+
 
 test("isGameWon should return true when all letters have been guessed", () => {
   // ARRANGE
