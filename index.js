@@ -7,9 +7,11 @@ function game(word, guesses) {
   //winconditie
   if (isGameLost(word, guesses)) {
     console.log("Helaas je hebt verloren")
+    { return; }
   }
   if (isGameWon(word, guesses)) {
     console.log("Hoera!, je hebt gewonnen en het woord in  " + guesses.length + " keer geraden.");
+    { return; }
   }
   //einde winconditie
 
@@ -22,6 +24,7 @@ function game(word, guesses) {
 
 
   game(word, guesses);
+
 
 }
 
@@ -36,3 +39,12 @@ __________
 `);
 
 game("javascript", []);
+
+const playAgain = question("Nog een keer spelen? (y/n) ");
+if (playAgain === "y") {
+  game("javascript", []);
+
+} else{
+  { return; }
+}
+
