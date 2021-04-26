@@ -3,7 +3,7 @@ function displayWordSoFar(word, guesses) {
   //declareer string met streepjes
   let wordPlaces = "";
 
-  //itereer wordlengte lang en log "_ "
+  //itereer wordlengte  en log "_ "
   for (let i = 0; i < word.length; i++) {
     //als de i'de letter van het woord voorkomt in de guesses, toon dan de letter op de i'de positie
     if (guesses.includes(word[i])) {
@@ -16,17 +16,14 @@ function displayWordSoFar(word, guesses) {
   return wordPlaces;
 }
 
+
 function isGameWon(word, guesses) {
   return word.split("").every((c) => guesses.includes(c));
 
 }
 
 function isGameLost(word, guesses) {
-  if(guesses.length >= 7 ) {
-    return true;
-  } else {
-    return false;
-  }
+  return guesses.length - guesses.includes(word) >= 8;
 }
 
 module.exports = {
