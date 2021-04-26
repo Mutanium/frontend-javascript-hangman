@@ -23,7 +23,11 @@ function isGameWon(word, guesses) {
 }
 
 function isGameLost(word, guesses) {
-  return guesses.length - guesses.includes(word) >= 8;
+  let cSet = new Set([...word])
+  if (guesses.reduce((sum,c)=>sum+(cSet.has(c)?0:1),0) >6) {
+    return true;
+  }
+
 }
 
 module.exports = {

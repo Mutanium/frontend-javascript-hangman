@@ -5,11 +5,11 @@ function game(word, guesses) {
   console.log(displayWordSoFar(word, guesses));
   console.log("Dit heb je tot nu toe geraden: ", ...guesses);
   //winconditie
-  if(isGameLost(word, guesses)) {
+  if (isGameLost(word, guesses)) {
     console.log("Helaas je hebt verloren")
   }
-  if(isGameWon(word, guesses)) {
-    console.log("Hoera!, je hebt gewonnen en het woord in  "+ guesses.length + " keer geraden.");
+  if (isGameWon(word, guesses)) {
+    console.log("Hoera!, je hebt gewonnen en het woord in  " + guesses.length + " keer geraden.");
   }
   //einde winconditie
 
@@ -19,7 +19,10 @@ function game(word, guesses) {
   guesses.push(letter);
 
   // volgende ronde! we roepen game nog een keer aan
+
+
   game(word, guesses);
+
 }
 
 console.log(`
