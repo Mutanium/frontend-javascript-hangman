@@ -1,7 +1,8 @@
 const { displayWordSoFar, isGameWon, isGameLost } = require("./gamelogic");
 
 test("displayWordSoFar should display an underscore followed by a space for each letter to guess", () => {
-  // ARRrANGE
+  // ARR
+  // ANGE
   const word = "javascript";
   const guesses = [];
 
@@ -11,7 +12,7 @@ test("displayWordSoFar should display an underscore followed by a space for each
   // ASSERT
   expect(displayedWord).toBe("_ _ _ _ _ _ _ _ _ _ ");
 });
-
+//test1 check!
 test("displayWordSoFar should display the letters guessed so far", () => {
   // ARRANGE
   const word = "javascript";
@@ -23,7 +24,7 @@ test("displayWordSoFar should display the letters guessed so far", () => {
   // ASSERT
   expect(displayedWord).toBe("_ a _ a _ _ _ i _ t ");
 });
-
+//test2 check!
 test("isGameWon should return false when all letters have not been guessed yet", () => {
   // ARRANGE
   const word = "javascript";
@@ -34,7 +35,9 @@ test("isGameWon should return false when all letters have not been guessed yet",
 
   // ASSERT
   expect(gameWon).toBe(false);
+
 });
+
 
 test("isGameWon should return true when all letters have been guessed", () => {
   // ARRANGE
